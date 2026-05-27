@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Conscious Family Centre — nature-connected alternative education in Abuja for children ages 0–10." />
+  <title>About Us | Conscious Family Centre</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-logo-wrap">
+      <img src="assets/logo.png" alt="CFC Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+      <div class="loader-logo-text" style="display:none;">🌿<br/>CFC</div>
+    </div>
+    <div class="loader-bar"><div class="loader-progress"></div></div>
+  </div>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="Conscious Family Centre Logo" onerror="this.style.display='none'" />
+        <div class="logo-text-group">
+          <span class="logo-name">Conscious Family Centre</span>
+          <span class="logo-sub">Nature · Play · Growth</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-join">Join Us</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" style="color:var(--yellow);">Join Us ✦</a>
+    <p class="mobile-nav-sub">Nature · Play · Growth</p>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="ph-orb1"></div>
+    <div class="ph-orb2"></div>
+    <div class="container ph-inner">
+      <div class="ph-crumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span style="color:var(--yellow);">About Us</span>
+      </div>
+      <h1>About <span>Conscious Family</span> Centre</h1>
+      <p>A safe, nurturing space where children learn through play, and families grow together — rooted in nature, built on community.</p>
+    </div>
+  </section>
+
+  <!-- ====== OUR STORY ====== -->
+  <section class="about-story">
+    <div class="container">
+      <div class="as-grid">
+        <!-- Images -->
+        <div class="as-images" data-anim="left">
+          <div class="as-img-main">
+            <!--
+              PLACE IMAGE: assets/images/library-class.jpg
+              (library-looking classroom)
+            -->
+            <img src="assets/images/library-class.jpg"
+                 alt="Children learning in the Conscious Family Centre classroom"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="img-fallback" style="display:none;background:linear-gradient(135deg,#1F6B3A,#4CAF50);min-height:300px;align-items:center;justify-content:center;font-size:4rem;">📚</div>
+          </div>
+
+          <div class="as-img-sec">
+            <!--
+              PLACE IMAGE: assets/images/forest-school.jpg
+              (group photo in forest with wood in the middle)
+            -->
+            <img src="assets/images/forest-school.jpg"
+                 alt="Children and educators in forest school outdoor setting"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="img-fallback" style="display:none;background:linear-gradient(135deg,#2d8a4e,#F4C542);min-height:200px;align-items:center;justify-content:center;font-size:3rem;">🌳</div>
+          </div>
+
+          <div class="as-badge">
+            <div class="bn">Est.</div>
+            <div class="bl">Abuja<br/>FCT</div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="as-content" data-anim="right">
+          <p class="section-label">Our Story</p>
+          <h2 class="section-title">Born from a <span>Belief</span> in Conscious Childhood</h2>
+
+          <p>The Conscious Family Centre was founded on a simple but powerful belief — that every child deserves a childhood rich in nature, play, creativity and genuine human connection.</p>
+
+          <p>Nestled inside the lush BMT Garden in Wuse 2, Abuja, CFC was created as a response to families seeking something more intentional for their young children. A space that honours the whole child — mind, body, and spirit — and brings parents and caregivers into the journey too.</p>
+
+          <p>From forest school sessions under open skies to structured homeschool hubs and professional nanny training, we've built a layered ecosystem of learning and support for families across Abuja.</p>
+
+          <div class="as-chips">
+            <div class="chip">
+              <span class="chip-dot" style="background:var(--secondary);"></span>
+              Nature-Connected Learning
+            </div>
+            <div class="chip">
+              <span class="chip-dot" style="background:var(--yellow);"></span>
+              Ages 0 – 10 Years
+            </div>
+            <div class="chip">
+              <span class="chip-dot" style="background:var(--orange);"></span>
+              Mon – Sat Open
+            </div>
+            <div class="chip">
+              <span class="chip-dot" style="background:var(--blue);"></span>
+              Abuja, FCT
+            </div>
+            <div class="chip">
+              <span class="chip-dot" style="background:var(--pink);"></span>
+              Community-Centred
+            </div>
+            <div class="chip">
+              <span class="chip-dot" style="background:var(--purple);"></span>
+              Professional Care
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== MISSION & VALUES ====== -->
+  <section class="why-us" style="padding:90px 0;">
+    <div class="container why-inner">
+      <div class="why-header text-center" data-anim="up">
+        <p class="section-label center white yellow">What Drives Us</p>
+        <h2 class="section-title white">Our Mission &amp; <span style="color:var(--yellow);">Values</span></h2>
+        <p class="section-sub white" style="margin-inline:auto;">
+          Every programme, every session, every interaction at CFC flows from these core commitments.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card" data-anim="up" data-delay="0">
+          <div class="why-icon">🌱</div>
+          <h3>Intentional Growth</h3>
+          <p>We believe growth is cultivated, not rushed. We create conditions where children naturally blossom at their own rhythm and pace.</p>
+        </div>
+        <div class="why-card" data-anim="up" data-delay="100">
+          <div class="why-icon">🤝</div>
+          <h3>Community &amp; Belonging</h3>
+          <p>No family should feel alone on this journey. CFC is a village — a place where parents, nannies and children all find their people.</p>
+        </div>
+        <div class="why-card" data-anim="up" data-delay="200">
+          <div class="why-icon">🌍</div>
+          <h3>Rooted in Nature</h3>
+          <p>Nature is our greatest teacher. We use the outdoors, seasons, and elements of the earth as the core of our curriculum.</p>
+        </div>
+        <div class="why-card" data-anim="up" data-delay="300">
+          <div class="why-icon">✨</div>
+          <h3>Wonder &amp; Curiosity</h3>
+          <p>We protect the magic of childhood. Every session is designed to spark curiosity, delight and the joy of discovery.</p>
+        </div>
+        <div class="why-card" data-anim="up" data-delay="400">
+          <div class="why-icon">🛡️</div>
+          <h3>Safety &amp; Trust</h3>
+          <p>Parents trust us with their most precious people. We hold that trust with the highest standards of care, structure and warmth.</p>
+        </div>
+        <div class="why-card" data-anim="up" data-delay="500">
+          <div class="why-icon">🎯</div>
+          <h3>Professional Excellence</h3>
+          <p>From our educators to our trained nannies, we hold ourselves to the highest standards of professional childcare practice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== WHO WE SERVE ====== -->
+  <section class="who-we-serve">
+    <div class="container">
+      <div class="text-center" data-anim="up">
+        <p class="section-label center">Who We Serve</p>
+        <h2 class="section-title">Made for <span>Every Family</span></h2>
+        <p class="section-sub" style="margin-inline:auto;">CFC is built for the full village — children, parents and caregivers alike.</p>
+      </div>
+
+      <div class="wws-grid">
+        <div class="wws-card" data-anim="up" data-delay="0">
+          <div class="wws-icon" style="background:rgba(76,175,80,0.1);">👶</div>
+          <h3>Babies &amp; Toddlers (0–3)</h3>
+          <p>Sensory play, gentle exploration, and early bonding in a safe, stimulating environment for your youngest ones.</p>
+        </div>
+        <div class="wws-card" data-anim="up" data-delay="100">
+          <div class="wws-icon" style="background:rgba(244,197,66,0.12);">🧒</div>
+          <h3>Young Children (3–6)</h3>
+          <p>Creative arts, forest school, and play-based learning that builds social skills and confidence during these formative years.</p>
+        </div>
+        <div class="wws-card" data-anim="up" data-delay="200">
+          <div class="wws-icon" style="background:rgba(52,152,219,0.1);">👦</div>
+          <h3>Older Children (6–10)</h3>
+          <p>STEAM activities, enrichment clubs, Waka Wednesday excursions and structured challenges that grow capable, curious minds.</p>
+        </div>
+        <div class="wws-card" data-anim="up" data-delay="300">
+          <div class="wws-icon" style="background:rgba(242,140,40,0.1);">👨‍👩‍👧</div>
+          <h3>Parents &amp; Caregivers</h3>
+          <p>Community support, parenting conversations and a warm space where you're seen, supported and never alone on this journey.</p>
+        </div>
+        <div class="wws-card" data-anim="up" data-delay="400">
+          <div class="wws-icon" style="background:rgba(190,68,173,0.09);">👩‍🏫</div>
+          <h3>Homeschool Families</h3>
+          <p>A dedicated hub with structured learning support, peer connection and resources for families choosing the homeschool path.</p>
+        </div>
+        <div class="wws-card" data-anim="up" data-delay="500">
+          <div class="wws-icon" style="background:rgba(31,107,58,0.1);">🏅</div>
+          <h3>Nannies &amp; Educators</h3>
+          <p>Professional training, certification and a community of practice for caregivers who want to grow their childcare expertise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== OPENING HOURS ====== -->
+  <section class="hours-section">
+    <div class="container">
+      <div class="hours-grid">
+        <div class="hours-card" data-anim="left">
+          <h3>🕐 Opening Hours</h3>
+          <div class="hours-row">
+            <span class="h-day">Monday</span>
+            <span class="h-time">10:00 AM – 3:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="h-day">Tuesday</span>
+            <span class="h-time">10:00 AM – 3:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="h-day">Wednesday</span>
+            <span class="h-time">10:00 AM – 3:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="h-day">Thursday</span>
+            <span class="h-time">10:00 AM – 3:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="h-day">Friday</span>
+            <span class="h-time">10:00 AM – 3:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="h-day">Saturday</span>
+            <span class="h-time">10:00 AM – 3:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="h-day">Sunday</span>
+            <span class="h-closed">Closed</span>
+          </div>
+        </div>
+
+        <div class="hours-info" data-anim="right">
+          <p class="section-label">Visit Us</p>
+          <h2 class="section-title">Find Us in the <span>Heart of</span> Abuja</h2>
+          <p class="section-sub">
+            We're located inside the beautiful BMT Garden, Wuse 2 — a
+            green, peaceful oasis right in the heart of Abuja, FCT.
+          </p>
+
+          <div class="hours-note">
+            <span>📍</span>
+            <span>Opposite Legacy Centre, Inside BMT Garden, Wuse 2, Abuja 904101, Federal Capital Territory, Nigeria.</span>
+          </div>
+
+          <br/>
+
+          <div class="hours-note" style="background:rgba(244,197,66,0.08);border-color:rgba(244,197,66,0.25);color:#7a5c00;margin-top:0;">
+            <span>💡</span>
+            <span>We recommend calling ahead to confirm session availability, especially for first-time visits and Nanny Training enrolment.</span>
+          </div>
+
+          <br/>
+
+          <a href="contact.html" class="btn btn-primary" style="margin-top:8px;">
+            Get Directions
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container cta-inner">
+      <div data-anim="up">
+        <p class="section-label center white yellow">Let's Connect</p>
+        <h2 class="section-title white">Ready to Be Part<br/>of Our Community?</h2>
+        <p class="section-sub white">Reach out to learn more, book a visit, or enrol your child today.</p>
+      </div>
+      <div class="cta-btns" data-anim="up" data-delay="150">
+        <a href="programs.html" class="btn btn-white">
+          View Programs
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="contact.html" class="btn btn-outline-white">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="f-brand">
+          <div class="f-brand-logo">
+            <img src="assets/logo.png" alt="CFC Logo" onerror="this.style.display='none'" />
+            <span class="f-brand-logo-text">Conscious Family Centre</span>
+          </div>
+          <p>A nature-connected alternative education and family playgroup space in Abuja, designed for children ages 0 to 10.</p>
+          <div class="f-socials">
+            <a href="https://www.instagram.com/consciousfamilycentre/" target="_blank" rel="noopener" class="f-social" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/reel/1488788116158630/?app=fbl" target="_blank" rel="noopener" class="f-social" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="tel:08035183784" class="f-social" aria-label="Phone">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="f-col">
+          <h4>Pages</h4>
+          <ul class="f-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Programs</h4>
+          <ul class="f-links">
+            <li><a href="programs.html">Stay &amp; Play</a></li>
+            <li><a href="programs.html">Homeschool Hub</a></li>
+            <li><a href="programs.html">Nanny Training</a></li>
+            <li><a href="programs.html">Holiday Camps</a></li>
+            <li><a href="programs.html">Forest School</a></li>
+            <li><a href="programs.html">Waka Wednesday</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Contact</h4>
+          <div class="f-contact-item">
+            <div class="f-contact-icon">📍</div>
+            <div class="f-contact-text">
+              <strong>Location</strong>
+              Opp. Legacy Centre, Inside BMT Garden, Wuse 2, Abuja 904101, FCT
+            </div>
+          </div>
+          <div class="f-contact-item">
+            <div class="f-contact-icon">📞</div>
+            <div class="f-contact-text">
+              <strong>Phone</strong>
+              <a href="tel:08035183784" style="color:inherit;">08035183784</a>
+            </div>
+          </div>
+          <div class="f-contact-item">
+            <div class="f-contact-icon">🕐</div>
+            <div class="f-contact-text">
+              <strong>Opening Hours</strong>
+              Mon – Sat: 10:00 AM – 3:00 PM
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Conscious Family Centre. All rights reserved.</p>
+        <div class="fb-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

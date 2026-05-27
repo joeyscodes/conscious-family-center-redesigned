@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Programs at Conscious Family Centre — Stay & Play, Homeschool Hub, Nanny Training, Holiday Camps and Core Activities." />
+  <title>Programs | Conscious Family Centre</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-logo-wrap">
+      <img src="assets/logo.png" alt="CFC Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+      <div class="loader-logo-text" style="display:none;">🌿<br/>CFC</div>
+    </div>
+    <div class="loader-bar"><div class="loader-progress"></div></div>
+  </div>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="Conscious Family Centre Logo" onerror="this.style.display='none'" />
+        <div class="logo-text-group">
+          <span class="logo-name">Conscious Family Centre</span>
+          <span class="logo-sub">Nature · Play · Growth</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programs.html" class="active">Programs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-join">Join Us</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" style="color:var(--yellow);">Join Us ✦</a>
+    <p class="mobile-nav-sub">Nature · Play · Growth</p>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="ph-orb1"></div>
+    <div class="ph-orb2"></div>
+    <div class="container ph-inner">
+      <div class="ph-crumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span style="color:var(--yellow);">Programs</span>
+      </div>
+      <h1>Our <span>Programs</span> &amp; Activities</h1>
+      <p>Purposefully designed experiences that nurture the whole child — through play, nature, creativity and community connection.</p>
+    </div>
+  </section>
+
+  <!-- ====== MAIN PROGRAMS ====== -->
+  <section class="programs-main">
+    <div class="container">
+
+      <!-- 1. Stay & Play -->
+      <div class="prog-section" data-anim="fade">
+        <div class="prog-img" data-anim="left">
+          <!--
+            PLACE IMAGE: assets/images/stay-play.jpg
+            (boy raising hands / children playing joyfully)
+          -->
+          <img src="assets/images/stay-play.jpg"
+               alt="Children enjoying stay and play sessions at CFC"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="img-fallback" style="display:none;background:linear-gradient(135deg,#4CAF50,#F4C542);min-height:280px;align-items:center;justify-content:center;font-size:4rem;">🏕️</div>
+          <span class="prog-img-lbl">Stay &amp; Play</span>
+        </div>
+
+        <div class="prog-details" data-anim="right">
+          <p class="prog-num">Program 01</p>
+          <h2>Stay &amp; Play Sessions</h2>
+          <p>
+            Our signature Stay &amp; Play sessions are drop-in sessions where parents
+            and caregivers stay alongside their children in a stimulating, supervised,
+            and nurturing environment. Designed for children ages 0–10, these sessions
+            blend free play with guided activities in a warm community setting.
+          </p>
+          <p>
+            Children explore, create, move and connect — while parents build friendships
+            and receive support from our team of trained facilitators.
+          </p>
+
+          <div class="prog-points">
+            <div class="prog-point"><span class="pp-dot"></span>Open to children ages 0–10</div>
+            <div class="prog-point"><span class="pp-dot"></span>Free play meets structured exploration</div>
+            <div class="prog-point"><span class="pp-dot"></span>Parent-accompanied sessions</div>
+            <div class="prog-point"><span class="pp-dot"></span>Monday – Saturday, 10AM – 3PM</div>
+            <div class="prog-point"><span class="pp-dot"></span>Supportive, trained facilitators on site</div>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary">
+            Enquire Now
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- 2. Homeschool Hub — flipped -->
+      <div class="prog-section flip" data-anim="fade">
+        <div class="prog-img" data-anim="right">
+          <!--
+            PLACE IMAGE: assets/images/homeschool-hub.jpg
+            (nanny/teacher sitting on floor with children in library-style setting)
+          -->
+          <img src="assets/images/homeschool-hub.jpg"
+               alt="Teacher and children in a homeschool hub session"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="img-fallback" style="display:none;background:linear-gradient(135deg,#1F6B3A,#3498DB);min-height:280px;align-items:center;justify-content:center;font-size:4rem;">📚</div>
+          <span class="prog-img-lbl">Homeschool Hub</span>
+        </div>
+
+        <div class="prog-details" data-anim="left">
+          <p class="prog-num">Program 02</p>
+          <h2>Homeschool Hub &amp; Community</h2>
+          <p>
+            The CFC Homeschool Hub is a structured yet flexible learning space designed
+            to support families who have chosen the homeschool path. We provide a
+            community environment where homeschooled children benefit from peer
+            interaction, enrichment activities, and access to our knowledgeable facilitators.
+          </p>
+          <p>
+            Beyond academics, we focus on socialisation, creative development, and the
+            kind of whole-child growth that homeschool families value most.
+          </p>
+
+          <div class="prog-points">
+            <div class="prog-point"><span class="pp-dot" style="background:var(--blue);"></span>Structured learning support</div>
+            <div class="prog-point"><span class="pp-dot" style="background:var(--blue);"></span>Peer socialisation opportunities</div>
+            <div class="prog-point"><span class="pp-dot" style="background:var(--blue);"></span>Weekly enrichment activities</div>
+            <div class="prog-point"><span class="pp-dot" style="background:var(--blue);"></span>Community of homeschool families</div>
+            <div class="prog-point"><span class="pp-dot" style="background:var(--blue);"></span>Resource sharing &amp; parent support</div>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary">
+            Enquire Now
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- 3. Nanny Training -->
+      <div class="prog-section" data-anim="fade">
+        <div class="prog-img" data-anim="left">
+          <!--
+            PLACE IMAGE: assets/images/nanny-training.jpg
+            (two women helping a girl play with a water hose)
+          -->
+          <img src="assets/images/nanny-training.jpg"
+               alt="Nanny intensive training session at Conscious Family Centre"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="img-fallback" style="display:none;background:linear-gradient(135deg,#F28C28,#BE44AD);min-height:280px;align-items:center;justify-content:center;font-size:4rem;">👩‍🏫</div>
+          <span class="prog-img-lbl">Nanny Training</span>
+        </div>
+
+        <div class="prog-details" data-anim="right">
+          <p class="prog-num">Program 03</p>
+          <h2>Nanny Intensive Training</h2>
+          <p>
+            Our Nanny Intensive Training programme is a professional development course
+            designed to equip nannies and caregivers in Abuja with the knowledge,
+            skills and confidence to provide high-quality childcare. Covering child
+            development, safety, creative play, and professional ethics.
+          </p>
+          <p>
+            Graduates leave with a certificate of completion and a community of
+            fellow trained professionals — elevating the standard of childcare
+            across Abuja one caregiver at a time.
+          </p>
+
+          <div class="prog-points">
+            <div class="prog-point"><span class="pp-dot" style="background:var(--orange);"></span>Child development foundations</div>
+            <div class="prog-point"><span class="pp-dot" style="background:var(--orange);"></span>Safety, first aid &amp; emergency protocols</div>
+            <div class="prog-point"><span class="pp-dot" style="background:var(--orange);"></span>Creative play &amp; activity facilitation</div>
+            <div class="prog-point"><span class="pp-dot" style="background:var(--orange);"></span>Professional ethics &amp; communication</div>
+            <div class="prog-point"><span class="pp-dot" style="background:var(--orange);"></span>Certificate of completion awarded</div>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary">
+            Enquire Now
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- 4. Holiday Camps — flipped -->
+      <div class="prog-section flip" style="border-bottom:none;margin-bottom:0;padding-bottom:20px;" data-anim="fade">
+        <div class="prog-img" data-anim="right">
+          <!--
+            PLACE IMAGE: assets/images/holiday-camp.jpg
+            (children looking through window of a white bus/train)
+          -->
+          <img src="assets/images/holiday-camp.jpg"
+               alt="Children on a holiday camp excursion at CFC"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="img-fallback" style="display:none;background:linear-gradient(135deg,#3498DB,#1F6B3A);min-height:280px;align-items:center;justify-content:center;font-size:4rem;">🔬</div>
+          <span class="prog-img-lbl">Holiday Camps &amp; STEAM</span>
+        </div>
+
+        <div class="prog-details" data-anim="left">
+          <p class="prog-num">Program 04</p>
+          <h2>Holiday Camps &amp; STEAM</h2>
+          <p>
+            Our Holiday Camps bring the adventure of learning to life during school
+            breaks. Packed with hands-on STEAM activities — Science experiments,
+            Technology, Engineering, Arts, and Maths — alongside scavenger hunts
+            and legendary messy play sessions that children absolutely love.
+          </p>
+          <p>
+            Each camp is themed and carefully structured to be both educational and
+            wildly fun — the kind of holiday memories children carry for life.
+          </p>
+
+          <div class="prog-points">
+            <div class="prog-point"><span class="pp-dot" style="background:var(--blue);"></span>STEAM-based experiments &amp; projects</div>
+            <div class="prog-point"><span class="pp-dot" style="background:var(--blue);"></span>Nature scavenger hunts</div>
+            <div class="prog-point"><span class="pp-dot" style="background:var(--blue);"></span>Messy play &amp; sensory exploration</div>
+            <div class="prog-point"><span class="pp-dot" style="background:var(--blue);"></span>Themed daily adventures</div>
+            <div class="prog-point"><span class="pp-dot" style="background:var(--blue);"></span>School holiday scheduling</div>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary">
+            Enquire Now
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== CORE ACTIVITIES ====== -->
+  <section class="core-activities">
+    <div class="container">
+      <div class="ca-header" data-anim="up">
+        <p class="section-label center">Every Week at CFC</p>
+        <h2 class="section-title">Core <span>Activities</span></h2>
+        <p class="section-sub" style="margin-inline:auto;">
+          These are the beating heart of everything we do — weekly experiences
+          that spark curiosity, build confidence and create lasting memories.
+        </p>
+      </div>
+
+      <div class="ca-grid">
+
+        <!-- Forest School -->
+        <div class="ca-card" data-anim="up" data-delay="0">
+          <div class="ca-img">
+            <!--
+              PLACE IMAGE: assets/images/forest-school.jpg
+              (group photo in forest with wood/logs in the middle)
+            -->
+            <img src="assets/images/forest-school.jpg"
+                 alt="Children and educators in a forest school outdoor session"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="img-fallback" style="display:none;background:linear-gradient(135deg,#1F6B3A,#4CAF50);">🌳</div>
+            <div class="ca-img-overlay"></div>
+          </div>
+          <div class="ca-body">
+            <div class="ca-icon" style="background:rgba(76,175,80,0.1);">🌳</div>
+            <h3>Forest School &amp; Outdoor Play</h3>
+            <p>Earth-based learning in the open air. Children explore nature, build dens, observe wildlife and develop a deep, meaningful connection to the natural world through forest school methodology.</p>
+          </div>
+        </div>
+
+        <!-- Creative Arts -->
+        <div class="ca-card" data-anim="up" data-delay="100">
+          <div class="ca-img">
+            <!--
+              PLACE IMAGE: assets/images/creative-arts.jpg
+              (children kneeling and painting on the floor)
+            -->
+            <img src="assets/images/creative-arts.jpg"
+                 alt="African children painting and doing creative arts at CFC"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="img-fallback" style="display:none;background:linear-gradient(135deg,#E94E77,#F4C542);">🎨</div>
+            <div class="ca-img-overlay"></div>
+          </div>
+          <div class="ca-body">
+            <div class="ca-icon" style="background:rgba(233,78,119,0.1);">🎨</div>
+            <h3>Creative Arts &amp; Crafts</h3>
+            <p>Painting, sculpting, collaging and messy play — every week brings a new creative adventure. These sessions develop fine motor skills, self-expression and the pure joy of making something with your hands.</p>
+          </div>
+        </div>
+
+        <!-- Weekly Enrichment Clubs -->
+        <div class="ca-card" data-anim="up" data-delay="200">
+          <div class="ca-img">
+            <!--
+              PLACE IMAGE: assets/images/chess-play.jpg
+              (children playing chess on a table)
+            -->
+            <img src="assets/images/chess-play.jpg"
+                 alt="Children playing chess in an enrichment club session"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="img-fallback" style="display:none;background:linear-gradient(135deg,#BE44AD,#3498DB);">🧩</div>
+            <div class="ca-img-overlay"></div>
+          </div>
+          <div class="ca-body">
+            <div class="ca-icon" style="background:rgba(190,68,173,0.1);">🧩</div>
+            <h3>Weekly Enrichment Clubs</h3>
+            <p>From chess to storytelling, music to coding-for-kids — our weekly clubs give children the chance to go deep into areas of interest, develop skills and connect with other children who share their passions.</p>
+          </div>
+        </div>
+
+        <!-- Waka Wednesday -->
+        <div class="ca-card" data-anim="up" data-delay="300">
+          <div class="ca-img">
+            <!--
+              PLACE IMAGE: assets/images/waka-wednesday.jpg
+              OR reuse another outdoor/excursion-themed image
+            -->
+            <img src="assets/images/waka-wednesday.jpg"
+                 alt="Children on a Waka Wednesday excursion exploring Abuja"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="img-fallback" style="display:none;background:linear-gradient(135deg,#F28C28,#1F6B3A);">🚌</div>
+            <div class="ca-img-overlay"></div>
+          </div>
+          <div class="ca-body">
+            <div class="ca-icon" style="background:rgba(242,140,40,0.1);">🚌</div>
+            <h3>Waka Wednesday Excursions</h3>
+            <p>Every Wednesday, we go on an adventure! Waka Wednesday takes children on guided excursions around Abuja — to parks, markets, museums and community spaces. The world beyond the classroom becomes the curriculum.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ENROLL CTA ====== -->
+  <section class="enroll-cta">
+    <div class="container cta-inner">
+      <div data-anim="up">
+        <p class="section-label center white yellow">Ready to Start?</p>
+        <h2 class="section-title white" style="margin-bottom:14px;">Join a Program<br/>That Fits Your Family</h2>
+        <p class="section-sub white">
+          Reach out to us today to find out which program is right for
+          your child. We'd love to welcome you.
+        </p>
+      </div>
+      <div class="cta-btns" style="margin-top:36px;" data-anim="up" data-delay="150">
+        <a href="contact.html" class="btn btn-white">
+          Contact Us
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="tel:08035183784" class="btn btn-outline-white">Call: 08035183784</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="f-brand">
+          <div class="f-brand-logo">
+            <img src="assets/logo.png" alt="CFC Logo" onerror="this.style.display='none'" />
+            <span class="f-brand-logo-text">Conscious Family Centre</span>
+          </div>
+          <p>A nature-connected alternative education and family playgroup space in Abuja, designed for children ages 0 to 10.</p>
+          <div class="f-socials">
+            <a href="https://www.instagram.com/consciousfamilycentre/" target="_blank" rel="noopener" class="f-social" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/reel/1488788116158630/?app=fbl" target="_blank" rel="noopener" class="f-social" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="tel:08035183784" class="f-social" aria-label="Phone">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="f-col">
+          <h4>Pages</h4>
+          <ul class="f-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Programs</h4>
+          <ul class="f-links">
+            <li><a href="programs.html">Stay &amp; Play</a></li>
+            <li><a href="programs.html">Homeschool Hub</a></li>
+            <li><a href="programs.html">Nanny Training</a></li>
+            <li><a href="programs.html">Holiday Camps</a></li>
+            <li><a href="programs.html">Forest School</a></li>
+            <li><a href="programs.html">Waka Wednesday</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Contact</h4>
+          <div class="f-contact-item">
+            <div class="f-contact-icon">📍</div>
+            <div class="f-contact-text">
+              <strong>Location</strong>
+              Opp. Legacy Centre, Inside BMT Garden, Wuse 2, Abuja 904101, FCT
+            </div>
+          </div>
+          <div class="f-contact-item">
+            <div class="f-contact-icon">📞</div>
+            <div class="f-contact-text">
+              <strong>Phone</strong>
+              <a href="tel:08035183784" style="color:inherit;">08035183784</a>
+            </div>
+          </div>
+          <div class="f-contact-item">
+            <div class="f-contact-icon">🕐</div>
+            <div class="f-contact-text">
+              <strong>Opening Hours</strong>
+              Mon – Sat: 10:00 AM – 3:00 PM
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Conscious Family Centre. All rights reserved.</p>
+        <div class="fb-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

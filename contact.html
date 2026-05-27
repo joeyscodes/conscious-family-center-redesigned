@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Conscious Family Centre — Located in Wuse 2, Abuja. Call us or find us on social media." />
+  <title>Contact Us | Conscious Family Centre</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+
+  <style>
+    /* Contact page extras */
+    .contact-hours {
+      background: var(--soft-grey);
+      padding: 80px 0;
+    }
+
+    .ch-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .ch-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .ch-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .ch-tag {
+      display: inline-block;
+      background: rgba(76,175,80,0.1);
+      color: var(--primary);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      margin-left: auto;
+    }
+
+    @media (max-width:768px) {
+      .ch-inner { grid-template-columns: 1fr; }
+    }
+
+    .contact-faq { padding: 80px 0; background: var(--white); }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .faq-item {
+      background: var(--soft-grey);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      border: 1.5px solid transparent;
+      transition: all var(--t-fast);
+    }
+
+    .faq-item:hover {
+      border-color: rgba(76,175,80,0.18);
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-item h4 {
+      font-size: 0.97rem;
+      font-weight: 700;
+      color: var(--dark-text);
+      margin-bottom: 8px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .faq-item h4 span { color: var(--secondary); flex-shrink: 0; }
+
+    .faq-item p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    @media (max-width:768px) {
+      .faq-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-logo-wrap">
+      <img src="assets/logo.png" alt="CFC Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+      <div class="loader-logo-text" style="display:none;">🌿<br/>CFC</div>
+    </div>
+    <div class="loader-bar"><div class="loader-progress"></div></div>
+  </div>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="Conscious Family Centre Logo" onerror="this.style.display='none'" />
+        <div class="logo-text-group">
+          <span class="logo-name">Conscious Family Centre</span>
+          <span class="logo-sub">Nature · Play · Growth</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-join">Join Us</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" style="color:var(--yellow);">Join Us ✦</a>
+    <p class="mobile-nav-sub">Nature · Play · Growth</p>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="ph-orb1"></div>
+    <div class="ph-orb2"></div>
+    <div class="container ph-inner">
+      <div class="ph-crumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span style="color:var(--yellow);">Contact Us</span>
+      </div>
+      <h1>Get in <span>Touch</span> With Us</h1>
+      <p>Have questions about our programs? Want to visit? We'd love to hear from you. Reach out any time — our community is always open.</p>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT MAIN ====== -->
+  <section class="contact-main">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- LEFT: Info -->
+        <div class="contact-left" data-anim="left">
+          <p class="section-label">Reach Us</p>
+          <h2>We'd Love to<br/>Hear from You</h2>
+          <p>Whether you're a parent curious about enrolment, a nanny interested in our training programme, or a family looking for community — we're here and we'd love to connect.</p>
+
+          <div class="ci-cards">
+            <!-- Phone -->
+            <a href="tel:08035183784" class="ci-card">
+              <div class="ci-icon" style="background:rgba(76,175,80,0.1);">📞</div>
+              <div class="ci-text">
+                <h4>Phone</h4>
+                <a href="tel:08035183784">08035183784</a>
+                <p style="font-size:0.78rem;color:var(--text-muted);margin-top:2px;font-weight:400;">Available Mon – Sat during opening hours</p>
+              </div>
+            </a>
+
+            <!-- Location -->
+            <div class="ci-card">
+              <div class="ci-icon" style="background:rgba(244,197,66,0.12);">📍</div>
+              <div class="ci-text">
+                <h4>Location</h4>
+                <p>Opp. Legacy Centre, Inside BMT Garden,<br/>Wuse 2, Abuja 904101, FCT</p>
+              </div>
+            </div>
+
+            <!-- Hours -->
+            <div class="ci-card">
+              <div class="ci-icon" style="background:rgba(242,140,40,0.1);">🕐</div>
+              <div class="ci-text">
+                <h4>Opening Hours</h4>
+                <p>Monday – Saturday<br/>10:00 AM – 3:00 PM</p>
+                <p style="font-size:0.78rem;color:var(--text-muted);margin-top:2px;font-weight:400;">Closed on Sundays</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="contact-social">
+            <h3>Find Us on Social Media</h3>
+            <div class="cs-links">
+              <a href="https://www.instagram.com/consciousfamilycentre/"
+                 target="_blank"
+                 rel="noopener"
+                 class="cs-link ig">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                @consciousfamilycentre
+              </a>
+
+              <a href="https://www.facebook.com/reel/1488788116158630/?app=fbl"
+                 target="_blank"
+                 rel="noopener"
+                 class="cs-link fb">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Conscious Family Center
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Map -->
+        <div class="contact-right" data-anim="right">
+          <div class="contact-map">
+            <!--
+              Google Maps embed for Wuse 2, Abuja.
+              For production, generate an exact embed iframe from
+              maps.google.com using the exact address.
+            -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.8!2d7.4892!3d9.0715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0ba27b6b18f5%3A0xbac8a72f71cef2a4!2sWuse%202%2C%20Abuja%2C%20Federal%20Capital%20Territory%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1716000000000!5m2!1sen!2sng"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Conscious Family Centre Location — Wuse 2, Abuja"
+            ></iframe>
+          </div>
+
+          <div class="map-info">
+            <div class="map-info-icon">📍</div>
+            <div class="map-info-text">
+              <h4>Conscious Family Centre</h4>
+              <p>Opposite Legacy Centre, Inside BMT Garden, Wuse 2, Abuja 904101, Federal Capital Territory, Nigeria.</p>
+            </div>
+          </div>
+
+          <!-- Quick action cards -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px;">
+            <a href="tel:08035183784"
+               style="display:flex;align-items:center;gap:10px;background:var(--primary);color:var(--white);padding:16px 18px;border-radius:14px;font-size:0.88rem;font-weight:600;text-decoration:none;transition:all 0.2s ease;"
+               onmouseover="this.style.background='var(--primary-dark)'"
+               onmouseout="this.style.background='var(--primary)'">
+              📞 Call Now
+            </a>
+            <a href="https://www.instagram.com/consciousfamilycentre/"
+               target="_blank"
+               rel="noopener"
+               style="display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#E94E77,#F28C28);color:var(--white);padding:16px 18px;border-radius:14px;font-size:0.88rem;font-weight:600;text-decoration:none;transition:all 0.2s ease;">
+              📸 Instagram
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== HOURS & DETAILS ====== -->
+  <section class="contact-hours">
+    <div class="container">
+      <div class="ch-inner">
+        <div class="ch-card" data-anim="left">
+          <h3>🕐 Opening Hours <span class="ch-tag">Mon–Sat</span></h3>
+          <div class="hours-row"><span class="h-day">Monday</span><span class="h-time">10:00 AM – 3:00 PM</span></div>
+          <div class="hours-row"><span class="h-day">Tuesday</span><span class="h-time">10:00 AM – 3:00 PM</span></div>
+          <div class="hours-row"><span class="h-day">Wednesday</span><span class="h-time">10:00 AM – 3:00 PM</span></div>
+          <div class="hours-row"><span class="h-day">Thursday</span><span class="h-time">10:00 AM – 3:00 PM</span></div>
+          <div class="hours-row"><span class="h-day">Friday</span><span class="h-time">10:00 AM – 3:00 PM</span></div>
+          <div class="hours-row"><span class="h-day">Saturday</span><span class="h-time">10:00 AM – 3:00 PM</span></div>
+          <div class="hours-row"><span class="h-day">Sunday</span><span class="h-closed">Closed</span></div>
+        </div>
+
+        <div data-anim="right">
+          <p class="section-label">Before You Visit</p>
+          <h2 class="section-title" style="font-size:1.9rem;">Good Things to <span>Know</span></h2>
+          <p class="section-sub" style="margin-bottom:24px;">A few helpful notes to make your first visit smooth and enjoyable.</p>
+
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div class="hours-note">
+              <span>📞</span>
+              <span>We recommend calling ahead for first-time visits to confirm session availability and get directions to our BMT Garden location.</span>
+            </div>
+            <div class="hours-note" style="background:rgba(52,152,219,0.07);border-color:rgba(52,152,219,0.2);color:#1a5276;">
+              <span>👕</span>
+              <span>Dress children in comfortable, play-ready clothing. Outdoor and messy play sessions happen regularly!</span>
+            </div>
+            <div class="hours-note" style="background:rgba(244,197,66,0.08);border-color:rgba(244,197,66,0.25);color:#7a5c00;">
+              <span>💡</span>
+              <span>For Nanny Intensive Training enrolment, please call us to discuss scheduling and intake dates.</span>
+            </div>
+            <div class="hours-note" style="background:rgba(242,140,40,0.07);border-color:rgba(242,140,40,0.2);color:#7d4a00;">
+              <span>🚌</span>
+              <span>Waka Wednesday excursions happen weekly. Contact us to ensure your child doesn't miss the adventure!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FAQ ====== -->
+  <section class="contact-faq">
+    <div class="container">
+      <div class="text-center" data-anim="up">
+        <p class="section-label center">Questions</p>
+        <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+        <p class="section-sub" style="margin-inline:auto;">Quick answers to the things families ask us most often.</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item" data-anim="up" data-delay="0">
+          <h4><span>🌿</span> What age groups do you accept?</h4>
+          <p>CFC welcomes children from birth (0 years) up to 10 years old. We have activities and sessions designed specifically for each developmental stage.</p>
+        </div>
+
+        <div class="faq-item" data-anim="up" data-delay="100">
+          <h4><span>📅</span> Do I need to book in advance?</h4>
+          <p>For Stay &amp; Play sessions, drop-ins are welcome. However, we recommend calling ahead, especially for first visits and programme-specific sessions like Nanny Training.</p>
+        </div>
+
+        <div class="faq-item" data-anim="up" data-delay="200">
+          <h4><span>👩‍🏫</span> Who can enrol in Nanny Training?</h4>
+          <p>The Nanny Intensive Training programme is open to nannies, caregivers, and anyone interested in professional childcare. Contact us to discuss the next intake date.</p>
+        </div>
+
+        <div class="faq-item" data-anim="up" data-delay="300">
+          <h4><span>🏕️</span> Can parents stay during sessions?</h4>
+          <p>Yes! Our Stay &amp; Play sessions are specifically designed for parent-accompanied play. Parents are not just welcome — they're part of the experience.</p>
+        </div>
+
+        <div class="faq-item" data-anim="up" data-delay="400">
+          <h4><span>🔬</span> When do Holiday Camps run?</h4>
+          <p>Holiday Camps run during school break periods. Follow us on Instagram @consciousfamilycentre or call us to find out about upcoming camp dates and themes.</p>
+        </div>
+
+        <div class="faq-item" data-anim="up" data-delay="500">
+          <h4><span>🚌</span> What is Waka Wednesday?</h4>
+          <p>Waka Wednesday is our weekly excursion programme where children explore Abuja — parks, museums, markets and community spaces. It runs every Wednesday during term.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container cta-inner">
+      <div data-anim="up">
+        <p class="section-label center white yellow">Still Have Questions?</p>
+        <h2 class="section-title white">We're Just a<br/>Call Away</h2>
+        <p class="section-sub white">Our team is warm, friendly and always happy to help you find the perfect fit for your family.</p>
+      </div>
+      <div class="cta-btns" data-anim="up" data-delay="150">
+        <a href="tel:08035183784" class="btn btn-white">
+          📞 Call: 08035183784
+        </a>
+        <a href="https://www.instagram.com/consciousfamilycentre/" target="_blank" rel="noopener" class="btn btn-outline-white">
+          Instagram DM
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="f-brand">
+          <div class="f-brand-logo">
+            <img src="assets/logo.png" alt="CFC Logo" onerror="this.style.display='none'" />
+            <span class="f-brand-logo-text">Conscious Family Centre</span>
+          </div>
+          <p>A nature-connected alternative education and family playgroup space in Abuja, designed for children ages 0 to 10.</p>
+          <div class="f-socials">
+            <a href="https://www.instagram.com/consciousfamilycentre/" target="_blank" rel="noopener" class="f-social" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/reel/1488788116158630/?app=fbl" target="_blank" rel="noopener" class="f-social" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="tel:08035183784" class="f-social" aria-label="Phone">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="f-col">
+          <h4>Pages</h4>
+          <ul class="f-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Programs</h4>
+          <ul class="f-links">
+            <li><a href="programs.html">Stay &amp; Play</a></li>
+            <li><a href="programs.html">Homeschool Hub</a></li>
+            <li><a href="programs.html">Nanny Training</a></li>
+            <li><a href="programs.html">Holiday Camps</a></li>
+            <li><a href="programs.html">Forest School</a></li>
+            <li><a href="programs.html">Waka Wednesday</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Contact</h4>
+          <div class="f-contact-item">
+            <div class="f-contact-icon">📍</div>
+            <div class="f-contact-text">
+              <strong>Location</strong>
+              Opp. Legacy Centre, Inside BMT Garden, Wuse 2, Abuja 904101, FCT
+            </div>
+          </div>
+          <div class="f-contact-item">
+            <div class="f-contact-icon">📞</div>
+            <div class="f-contact-text">
+              <strong>Phone</strong>
+              <a href="tel:08035183784" style="color:inherit;">08035183784</a>
+            </div>
+          </div>
+          <div class="f-contact-item">
+            <div class="f-contact-icon">🕐</div>
+            <div class="f-contact-text">
+              <strong>Opening Hours</strong>
+              Mon – Sat: 10:00 AM – 3:00 PM
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Conscious Family Centre. All rights reserved.</p>
+        <div class="fb-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
